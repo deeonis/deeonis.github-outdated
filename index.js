@@ -1,2 +1,2 @@
-var String = "Denis";
-console.log("Hello"String);
+var myName = "Denis";
+console.log(myName);
