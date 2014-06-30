@@ -5,13 +5,15 @@ var identification = function(owner)
 {
 	if (owner = "Denis")
 	{
-		return accessok = "access is allowed";
-		console.log(accessok)
+		var access = "access is allowed";
+		console.log(access);
 	}
 	else
 	{
-		return accessbad = "access denied";
-		console.log(accessbad)
+		var access = "access denied";
+		console.log(access);
 	}
+	return access;
 }
-identification(myName);
+var result = identification(myName);
+console.log(result);
