@@ -3,7 +3,7 @@ console.log("Hello " + myName);
 
 var identification = function(owner)
 {
-	if (owner = "Denis")
+	if (owner === "Denis")
 	{
 		var access = "access is allowed";
 		console.log(access);
