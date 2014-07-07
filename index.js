@@ -1,5 +1,5 @@
-var myName=prompt("Enter your name");
-console.log("Hello " + myName);
+//var myName=prompt("Enter your name");
+//console.log("Hello " + myName);
 
 var identification = function(owner)
 {
@@ -14,6 +14,15 @@ var identification = function(owner)
 		console.log(access);
 	}
 	return access;
+} 
+
+//var result = identification(myName);
+//console.log(result);
+
+var buttonclick = function(e)
+{
+	var input = document.getElementsByTagName('input')[0]; //нахожу инпут с помощью API браузера (первый инпут во всем массиве данных)
+	var strOwner = input.value; //присваиваю переменной конкретное значение инпута
+	var access = identification(strOwner);
+	console.log(access);
 }
-var result = identification(myName);
-console.log(result);
