@@ -6,12 +6,12 @@ var identification = function(owner)
 	if (owner === "Denis")
 	{
 		var access = "access is allowed";
-		console.log(access);
+//		console.log(access);
 	}
 	else
 	{
 		var access = "access denied";
-		console.log(access);
+//		console.log(access);
 	}
 	return access;
 } 
