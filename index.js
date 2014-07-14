@@ -25,4 +25,10 @@ var buttonclick = function(e)
 	var strOwner = input.value; //присваиваю переменной конкретное значение инпута
 	var access = identification(strOwner);
 	console.log(access);
+
+//Вывожу значение из консоли на html-страницу
+
+	var newdiv = document.createElement("div"); //создаю новый элемент
+	document.getElementsByTagName('body')[0].appendChild(newdiv); //нахожу body из html и с помощью appendChild добавляю под него newdiv 
+	newdiv.innerHTML = access; //присваивают newdiv значение переменной access
 }
