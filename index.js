@@ -18,19 +18,21 @@ var buttonclick = function(e)
 	var access = identification(strOwner);
 	console.log(access);
 
-	var newdiv = document.createElement('div');
+	var myBody = document.getElementsByTagName('body')[0];
 
 	if (count == 1)
 {
-	var myBody = document.getElementsByTagName('body')[0];
+	var newdiv = document.createElement('div');
+	newdiv.id = "newid";
 	myBody.appendChild(newdiv); 
 	newdiv.innerHTML = access;
 }
 	else
 	{
-	var newtext = document.createElement('div1');
+	var newtext = document.createElement('div');
 	var par = document.getElementById('m');
-	m.appendChild(newtext);
+	var position = document.getElementById('newid');
+	par.insertBefore(newtext, par.firstChild);
 	newtext.innerHTML = ("<p>" + "</p>" + access);
 	}
 
