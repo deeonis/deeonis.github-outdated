@@ -23,15 +23,15 @@ var buttonclick = function(e)
 	if (count == 1)
 {
 	var myBody = document.getElementsByTagName('body')[0];
-	myBody.appendChild(newdiv); //нахожу body из html и с помощью appendChild добавляю под него newdiv 
-	newdiv.innerHTML = access; //присваивают newdiv значение переменной access
+	myBody.appendChild(newdiv); 
+	newdiv.innerHTML = access;
 }
 	else
 	{
 	var newtext = document.createElement('div1');
 	var par = document.getElementById('m');
 	m.appendChild(newtext);
-	newtext.innerHTML = access;
+	newtext.innerHTML = ("<p>" + "</p>" + access);
 	}
 
 count = (count + 1);
