@@ -2,16 +2,23 @@ var identification = function(owner)
 {
 	if (owner === "Denis")
 	{
-		var access = "access is allowed";
+		var access = [1,"access is allowed"];
 	}
 	else
 	{
-		var access = "access denied";
+		var access = [0,"access denied"];
 	}
 	return access;
 } 
-var count = 1;
-var buttonclick = function(e)
+
+var kp = function(e)
+{
+	if (e.keyCode == 13) {
+		buttonclick();
+	}
+}
+
+var buttonclick = function()
 {
 	var input = document.getElementById('search'); 
 	var strOwner = input.value;
@@ -19,22 +26,21 @@ var buttonclick = function(e)
 	console.log(access);
 
 	var myBody = document.getElementsByTagName('body')[0];
-
-	if (count == 1)
-{
 	var newdiv = document.createElement('div');
-	newdiv.id = "newid";
-	myBody.appendChild(newdiv); 
-	newdiv.innerHTML = access;
-}
+	
+	myBody.appendChild(newdiv);
+	newdiv.innerHTML = access[1];
+
+	var par = document.getElementById('m');
+	par.insertBefore(newdiv, par.firstChild);
+	newdiv.innerHTML = ("<p>" + "</p>" + access[1]);
+	if (access[0] == 0)
+	{
+		newdiv.style.color = '#FF0000';
+	}
 	else
 	{
-	var newtext = document.createElement('div');
-	var par = document.getElementById('m');
-	var position = document.getElementById('newid');
-	par.insertBefore(newtext, par.firstChild);
-	newtext.innerHTML = ("<p>" + "</p>" + access);
+		newdiv.style.color = '#00FF00'
 	}
 
-count = (count + 1);
 }
