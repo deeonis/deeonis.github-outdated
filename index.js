@@ -31,7 +31,7 @@ var buttonclick = function(e)
 	var newtext = document.createElement('div1');
 	var par = document.getElementById('m');
 	m.appendChild(newtext);
-	newtext.innerHTML = ("<p>" + "</p>" + access);
+	newtext.innerHTML = (access);
 	}
 
 count = (count + 1);
