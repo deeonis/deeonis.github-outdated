@@ -1,28 +1,38 @@
-//var myName=prompt("Enter your name");
-//console.log("Hello " + myName);
-
 var identification = function(owner)
 {
 	if (owner === "Denis")
 	{
 		var access = "access is allowed";
-//		console.log(access);
 	}
 	else
 	{
 		var access = "access denied";
-//		console.log(access);
 	}
 	return access;
 } 
-
-//var result = identification(myName);
-//console.log(result);
-
+var count = 1;
 var buttonclick = function(e)
 {
-	var input = document.getElementsByTagName('input')[0]; //нахожу инпут с помощью API браузера (первый инпут во всем массиве данных)
-	var strOwner = input.value; //присваиваю переменной конкретное значение инпута
+	var input = document.getElementById('search'); 
+	var strOwner = input.value;
 	var access = identification(strOwner);
 	console.log(access);
+
+	var newdiv = document.createElement('div');
+
+	if (count == 1)
+{
+	var myBody = document.getElementsByTagName('body')[0];
+	myBody.appendChild(newdiv); //нахожу body из html и с помощью appendChild добавляю под него newdiv 
+	newdiv.innerHTML = access; //присваивают newdiv значение переменной access
+}
+	else
+	{
+	var newtext = document.createElement('div1');
+	var par = document.getElementById('m');
+	m.appendChild(newtext);
+	newtext.innerHTML = access;
+	}
+
+count = (count + 1);
 }
