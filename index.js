@@ -1,25 +1,23 @@
 var identification = function(owner)
-{
+	{	
 	if (owner === "Denis")
-	{
+		{
 		var access = [1,"access is allowed"];
-	}
+		}
 	else
-	{
+		{
 		var access = [0,"access denied"];
-	}
+		}
 	return access;
-} 
-
-var kp = function(e)
-{
-	if (e.keyCode == 13) {
+	} 
+var kp = function()
+	{
+	if (window.event.keyCode == 13) {
 		buttonclick();
 	}
-}
-
+	}
 var buttonclick = function()
-{
+	{
 	var input = document.getElementById('search'); 
 	var strOwner = input.value;
 	var access = identification(strOwner);
@@ -35,12 +33,11 @@ var buttonclick = function()
 	par.insertBefore(newdiv, par.firstChild);
 	newdiv.innerHTML = ("<p>" + "</p>" + access[1]);
 	if (access[0] == 0)
-	{
+		{
 		newdiv.style.color = '#FF0000';
-	}
+		}
 	else
-	{
+		{
 		newdiv.style.color = '#00FF00'
+		}
 	}
-
-}
