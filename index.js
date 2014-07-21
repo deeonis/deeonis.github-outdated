@@ -1,5 +1,6 @@
-function identification(owner) {	
-	if (owner === "Denis") {
+function identification(owner) {
+	var userName = "Denis";	
+	if (owner === userName) {
 		var access = [1,"access is allowed"];
 	}
 	else {
@@ -13,6 +14,7 @@ function checkEnterAndSubmit() {
 		buttonclick();
 	}
 }
+var count=1;
 
 function buttonclick() {
 	var input = document.getElementById('name'); 
@@ -20,6 +22,10 @@ function buttonclick() {
 	var access = identification(name);
 	var newdiv = document.createElement('div');
 	var par = document.getElementById('output');
+	if (count>6) {
+		var olddiv = document.getElementsByTagName('div')[5];
+		par.removeChild(olddiv);
+	}
 	par.insertBefore(newdiv, par.firstChild);
 	newdiv.innerHTML = ("<p></p>" + access[1]);
 	if (access[0] == 0) {
@@ -28,4 +34,5 @@ function buttonclick() {
 	else {
 		newdiv.style.color = '#00FF00'
 	}
+	count++;
 }
