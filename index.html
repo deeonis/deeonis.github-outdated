@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-
 <head>
-  <title>Универсальный валидатор доступа</title>
+	<meta charset="utf-8">
+ 	<title>Универсальный валидатор доступа</title>
+ 	<script src="index.js"></script>
 </head>
 
- <script src="index.js"></script>
+<body>
+	<p> 
+   	 	<input placeholder="Как вас зовут?" id="name" onKeyPress="checkEnterAndSubmit()">
+     	<input value="Submit" onclick="buttonclick()" type="button" id="button"/>
+	</p>
+  	
+	<p id="output"></p>
 
- <body class= "class">
-<!--   <p>Как вас зовут?</p><-->
-   <p> 
-   	   <input placeholder="Как вас зовут?" id ="search" onKeyPress="kp()">
-       <input value="Submit" onclick="buttonclick()" type="button" id = "button"/>
-  </p>
-  
-<p id = "m">
-</p>
- 
- </body>
-
-
+</body>
 </html>
