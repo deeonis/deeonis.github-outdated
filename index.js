@@ -1,6 +1,6 @@
 function identification(owner) {
-	var userName = "Denis";	
-	if (owner === userName) {
+	var libs = ["islands-components", "islands-user", "islands-icons", "islands-services", "islands-page", "islands-romochka"];	
+	if (libs.indexOf(owner)!=-1) {
 		var access = [1,"access is allowed"];
 	}
 	else {
@@ -27,6 +27,7 @@ function buttonclick() {
 		par.removeChild(olddiv);
 	}
 	par.insertBefore(newdiv, par.firstChild);
+	console.log(par.firstChild);
 	newdiv.innerHTML = ("<p></p>" + access[1]);
 	if (access[0] == 0) {
 		newdiv.style.color = '#FF0000';
