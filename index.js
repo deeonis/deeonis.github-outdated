@@ -24,10 +24,10 @@ function buttonclick() {
 	par.insertBefore(newdiv, par.firstChild);
 	newdiv.innerHTML = ("<p></p>" + access[1]);
 	if (access[0] == 0) {
-		newdiv.style.color = '#FF0000';
+		newdiv.className = 'denied';
 	}
 	else {
-		newdiv.style.color = '#00FF00'
+		newdiv.className = 'allowed';
 	}
 	count++;
 }
