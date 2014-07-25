@@ -3,15 +3,16 @@
 <head>
 	<meta charset="utf-8">
  	<title>Универсальный валидатор доступа</title>
- 	<script src="index.js"></script>
+ 	<script src="test.js"></script>
 </head>
 
 <body>
-	<p> 
-   	 	<input placeholder="Как вас зовут?" id="name" onKeyPress="checkEnterAndSubmit()">
-     	<input value="Submit" onclick="buttonclick()" type="button" id="button"/>
+	<p>
+		<form autocomplete="off" onsubmit="return false"> 
+   	 		<input placeholder="Как вас зовут?" id="name" value="islands-" onKeyPress="checkEnterAndSubmit()" name="input">
+     		<input onclick="buttonclick()" type="submit" id="button" name="button"/>
 	</p>
-  	
+  		</form>
 	<p id="output"></p>
 </body>
 </html>

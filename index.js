@@ -9,11 +9,6 @@ function identification(owner) {
 	return access;
 } 
 
-function checkEnterAndSubmit() {
-	if (window.event.keyCode == 13) {
-		buttonclick();
-	}
-}
 var count=1;
 
 function buttonclick() {
@@ -27,7 +22,6 @@ function buttonclick() {
 		par.removeChild(olddiv);
 	}
 	par.insertBefore(newdiv, par.firstChild);
-	console.log(par.firstChild);
 	newdiv.innerHTML = ("<p></p>" + access[1]);
 	if (access[0] == 0) {
 		newdiv.style.color = '#FF0000';
