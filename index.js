@@ -1,10 +1,12 @@
-var COLORS = {}
-	COLORS.red = '#F00';
-	COLORS.green = '#090';
+var COLORS = {
+	red : '#F00',
+	green : '#090'
+}
 
-var MESSAGE = {}
-	MESSAGE.good = 'access is allowed';
-	MESSAGE.bad = 'access denied';
+var MESSAGE = {
+	good : 'access is allowed',
+	bad : 'access denied'
+}
 
 function identification(owner) {
 	var libs = ['islands-components', 'islands-user', 'islands-icons', 'islands-services', 'islands-page', 'islands-romochka'];	
