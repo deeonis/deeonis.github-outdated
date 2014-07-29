@@ -1,11 +1,19 @@
+var COLORS = {}
+	COLORS.red = '#F00';
+	COLORS.green = '#090';
+
+var MESSAGE = {}
+	MESSAGE.good = 'access is allowed';
+	MESSAGE.bad = 'access denied';
+
 function identification(owner) {
 	var libs = ['islands-components', 'islands-user', 'islands-icons', 'islands-services', 'islands-page', 'islands-romochka'];	
 	
 	if (libs.indexOf(owner) != -1) {
-		var access = [1, 'access is allowed'];
+		var access = MESSAGE.good;
 	}
 	else {
-		var access = [0, 'access denied'];
+		var access = MESSAGE.bad;
 	}
 	return access;
 } 
@@ -32,13 +40,13 @@ function buttonclick() {
 		par.appendChild(newdiv);
 	}
 
-	newdiv.innerHTML = ('<br>' + access[1]);
+	newdiv.innerHTML = ('<br>' + access);
 
-	if (access[0] == 0) {
-		newdiv.className = 'denied';
+	if (access == MESSAGE.bad) {
+		newdiv.style.color = COLORS.red;
 	}
 	else {
-		newdiv.className = 'allowed';
+		newdiv.style.color = COLORS.green;
 	}
 	count++;
 }
